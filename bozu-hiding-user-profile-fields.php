@@ -28,7 +28,7 @@ along with Bozu Hiding User Profile Fields. If not, see https://github.com/fcojg
 /**
  * Hiding User Profile Fields
  */
-function remove_website_row_wpse_94963_css()
+function bozu_hiding_user_profile_fields()
 {
     echo '<style>
         user-admin-color-wrap,
@@ -38,5 +38,5 @@ function remove_website_row_wpse_94963_css()
         { display: none; }                
     </style>';
 }
-add_action( 'admin_head-user-edit.php', 'remove_website_row_wpse_94963_css' );
-add_action( 'admin_head-profile.php',   'remove_website_row_wpse_94963_css' );
+add_action( 'admin_head-user-edit.php', 'bozu_hiding_user_profile_fields' );
+add_action( 'admin_head-profile.php',   'bozu_hiding_user_profile_fields' );
