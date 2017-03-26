@@ -1,0 +1,40 @@
+<?php
+/*
+Plugin Name: Bozu Hiding User Profile Fields
+Plugin URI:  https://github.com/fcojgodoy/bozu-hiding-user-profile-fields
+Description: Remove rarely used user profile fields ()
+Version:     0.0.1-dev
+Author:      fcojgodoy
+Author URI:  https://github.com/fcojgodoy/
+License:     GPL3
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
+Text Domain: bozuhupf
+Domain Path: /languages
+
+Bozu Hiding User Profile Fields is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+any later version.
+
+Bozu Hiding User Profile Fields is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with Bozu Hiding User Profile Fields. If not, see https://github.com/fcojgodoy/bozu-hiding-user-profile-fields
+
+
+/**
+ * Hiding User Profile Fields
+ */
+function remove_website_row_wpse_94963_css()
+{
+    echo '<style>
+        tr.user-url-wrap,
+        tr.user-web        
+        { display: none; }                
+    </style>';
+}
+add_action( 'admin_head-user-edit.php', 'remove_website_row_wpse_94963_css' );
+add_action( 'admin_head-profile.php',   'remove_website_row_wpse_94963_css' );
