@@ -31,12 +31,12 @@ along with Bozu Hiding User Profile Fields. If not, see https://github.com/fcojg
 function bozu_hiding_user_profile_fields()
 {
     echo '<style>
-        user-admin-color-wrap,
-        user-admin-bar-front-wrap,
-        user-display-name-wrap,
-        user-url-wrap        
-        { display: none; }                
-    </style>';
+	tr.user-admin-color-wrap,
+	tr.user-admin-bar-front-wrap,
+	tr.user-display-name-wrap,
+	tr.user-url-wrap
+	{ display: none; }
+	</style>';
 }
 add_action( 'admin_head-user-edit.php', 'bozu_hiding_user_profile_fields' );
 add_action( 'admin_head-profile.php',   'bozu_hiding_user_profile_fields' );
