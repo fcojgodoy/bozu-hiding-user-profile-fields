@@ -31,8 +31,10 @@ along with Bozu Hiding User Profile Fields. If not, see https://github.com/fcojg
 function remove_website_row_wpse_94963_css()
 {
     echo '<style>
-        tr.user-url-wrap,
-        tr.user-web        
+        user-admin-color-wrap,
+        user-admin-bar-front-wrap,
+        user-display-name-wrap,
+        user-url-wrap        
         { display: none; }                
     </style>';
 }
